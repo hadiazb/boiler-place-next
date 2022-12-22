@@ -1,0 +1,7 @@
+export { default as MontserratBold } from '../assets/fonts/Montserrat-Bold.ttf'
+export { default as MontserratLight } from '../assets/fonts/Montserrat-Light.ttf'
+export { default as MontserratRegular } from '../assets/fonts/Montserrat-Regular.ttf'
+export { default as MontserratSemiBold } from '../assets/fonts/Montserrat-SemiBold.ttf'
+export { default as HelveticaSemiBold } from '../assets/fonts/Helvetica-Bold.ttf'
+export { default as HelveticaLight } from '../assets/fonts/Helvetica-Light.ttf'
+export { default as HelveticaRegular } from '../assets/fonts/Helvetica-Regular.ttf'
