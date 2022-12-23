@@ -1,5 +1,4 @@
-import tw from 'twin.macro'
-import styled from 'styled-components'
+import tw, { styled } from 'twin.macro'
 import Select from 'react-select'
 
 export const StyledWrapperField = styled.div`

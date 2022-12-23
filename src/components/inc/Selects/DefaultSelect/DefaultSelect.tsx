@@ -12,7 +12,7 @@ import {
     StyledDefaultSelectRight,
     StyledDefaultSelectLeft,
     StyledWrapperField,
-} from './styles'
+} from './deaultSelect-styles'
 
 export interface DefaultSelectProps<T> {
     options: T[]

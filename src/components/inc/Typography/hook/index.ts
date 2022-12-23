@@ -11,7 +11,7 @@ import {
     StyledTypographyA,
     StyledTypographyP,
     StyledTypographySpan,
-} from '../styles'
+} from '../typography-styles'
 
 export type UseTypography = {
     variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'a'
@@ -25,6 +25,17 @@ export type UseTypography = {
         | 'success'
         | 'warning'
 }
+
+export type StyledTypographyType =
+    | typeof StyledTypographyH1
+    | typeof StyledTypographyH2
+    | typeof StyledTypographyH3
+    | typeof StyledTypographyH4
+    | typeof StyledTypographyH5
+    | typeof StyledTypographyH6
+    | typeof StyledTypographyA
+    | typeof StyledTypographyP
+    | typeof StyledTypographySpan
 
 export const useTypography = ({ variant, color }: UseTypography) => {
     const { colors } = Theme()
@@ -41,7 +52,7 @@ export const useTypography = ({ variant, color }: UseTypography) => {
         span: StyledTypographySpan,
     })
 
-    const [StyledTypography, setStyledTypography] = useState(component[variant] as any)
+    const [StyledTypography, setStyledTypography] = useState<any>(component[variant])
     const [StyledColor, setStyledColor] = useState(colorAux[color || 'dark'])
 
     useEffect(() => {

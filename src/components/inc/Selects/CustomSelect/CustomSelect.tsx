@@ -9,7 +9,7 @@ import {
     StyledLeftField,
     StyledRightField,
     StyledListField,
-} from './styles'
+} from './customSelect-styles'
 
 export interface SelectProps extends SelectHTMLAttributes<HTMLButtonElement> {
     iconLeft?: NonNullable<ReactElement>

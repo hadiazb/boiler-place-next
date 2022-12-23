@@ -6,7 +6,7 @@ import { FlattenSimpleInterpolation } from 'styled-components'
  */
 export const getMontserratFont = (): FlattenSimpleInterpolation => css`
   @font-face {
-    src: url('../fonts/Montserrat-Medium.ttf') format('woff2');
+    src: url('./fonts/Montserrat-Medium.ttf') format('woff2');
     font-family: 'Montserrat';
     font-weight: 500;
     font-style: normal;
@@ -14,7 +14,7 @@ export const getMontserratFont = (): FlattenSimpleInterpolation => css`
   }
 
   @font-face {
-    src: url('../fonts/Montserrat-Regular.ttf') format('woff2');
+    src: url('./fonts/Montserrat-Regular.ttf') format('woff2');
     font-family: 'Montserrat';
     font-weight: 400;
     font-style: normal;
@@ -22,7 +22,7 @@ export const getMontserratFont = (): FlattenSimpleInterpolation => css`
   }
 
   @font-face {
-    src: url('../fonts/Montserrat-SemiBold.ttf') format('woff2');
+    src: url('./fonts/Montserrat-SemiBold.ttf') format('woff2');
     font-family: 'Montserrat';
     font-weight: 600;
     font-style: normal;
@@ -30,7 +30,7 @@ export const getMontserratFont = (): FlattenSimpleInterpolation => css`
   }
 
   @font-face {
-    src: url('../fonts/Montserrat-Bold.ttf') format('woff2');
+    src: url('./fonts/Montserrat-Bold.ttf') format('woff2');
     font-family: 'Montserrat';
     font-weight: 700;
     font-style: normal;
@@ -38,7 +38,7 @@ export const getMontserratFont = (): FlattenSimpleInterpolation => css`
   }
 
   @font-face {
-    src: url('../fonts/Montserrat-ExtraBold.ttf') format('woff2');
+    src: url('./fonts/Montserrat-ExtraBold.ttf') format('woff2');
     font-family: 'Montserrat';
     font-weight: 800;
     font-style: normal;
@@ -50,7 +50,7 @@ export const getMontserratFont = (): FlattenSimpleInterpolation => css`
  */
 export const getHelveticaFont = (): FlattenSimpleInterpolation => css`
   @font-face {
-    src: url('../fonts/Helvetica.ttf') format('woff2');
+    src: url('./fonts/Helvetica.ttf') format('woff2');
     font-family: 'Helvetica';
     font-weight: 400;
     font-style: normal;
@@ -58,7 +58,7 @@ export const getHelveticaFont = (): FlattenSimpleInterpolation => css`
   }
 
   @font-face {
-    src: url('../fonts/Helvetica-Bold.ttf') format('woff2');
+    src: url('./fonts/Helvetica-Bold.ttf') format('woff2');
     font-family: 'Helvetica';
     font-weight: 800;
     font-style: normal;

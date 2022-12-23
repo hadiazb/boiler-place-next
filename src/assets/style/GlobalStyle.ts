@@ -1,4 +1,5 @@
 import { createGlobalStyle, DefaultTheme } from 'styled-components'
+import tw from 'twin.macro'
 
 import resetStyles from './ResetStyles'
 import { getMontserratFont, getHelveticaFont } from './webfonts'
@@ -13,6 +14,9 @@ export type CustomStylesProps<T = DefaultTheme> = GlobalStyleProps & {
 }
 
 export const GlobalStyle = createGlobalStyle<CustomStylesProps>`
+    * {
+      ${tw`font-montserrat`}
+    }
 
     /* load fonts */
     ${getMontserratFont()}

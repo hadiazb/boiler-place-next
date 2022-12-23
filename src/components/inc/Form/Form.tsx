@@ -1,6 +1,6 @@
 import { FormHTMLAttributes, ReactNode } from 'react'
 
-import { StyledForm } from './styles'
+import { StyledForm } from './form-styles'
 
 export interface FormProps extends FormHTMLAttributes<HTMLButtonElement> {
     children: ReactNode

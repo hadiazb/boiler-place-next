@@ -4,5 +4,6 @@
 	"singleQuote": true,
 	"jsxSingleQuote": false,
 	"semi": false,
+	"tabWidth": 4,
 	"endOfLine": "auto"
 }

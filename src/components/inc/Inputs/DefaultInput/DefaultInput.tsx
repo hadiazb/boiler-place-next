@@ -2,7 +2,7 @@ import { ReactElement } from 'react'
 
 import { useFocus } from './hooks/useFocus'
 
-import { StyledInputContainer, StyledLabel, StyledInput } from './styles'
+import { StyledInputContainer, StyledLabel, StyledInput } from './defaultInput-styles'
 import { Typography } from '../..'
 
 export interface DefaultInputProps {

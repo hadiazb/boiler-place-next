@@ -1,2 +1,2 @@
-export { default as MainLayout } from './MainLayout';
-export { default as DefaultLayout } from './DefaultLayout';
+export { default as MainLayout } from './MainLayout'
+export { default as ViewLayout } from './ViewLayout'

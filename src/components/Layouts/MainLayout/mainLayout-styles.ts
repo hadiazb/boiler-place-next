@@ -1,5 +1,12 @@
 import tw, { styled } from 'twin.macro'
 
 export const StyledMainLayout = styled.div`
-  ${tw`flex flex-col justify-between items-center p-1.5 border min-h-screen bg-indigo-300`}
+    ${tw`min-h-screen bg-indigo-300`}
+`
+
+export const StyledMainLayoutCtr = styled.div`
+    ${tw`px-1 mx-auto max-w-6xl`}
+    ${tw`sm:px-2`}
+    ${tw`sm:px-3`}
+    ${tw`md:px-5`}
 `

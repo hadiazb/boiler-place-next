@@ -4,6 +4,7 @@
 	"editor.wordWrapColumn": 140,
 	"editor.formatOnType": false,
 	"editor.formatOnPaste": false,
+	"editor.tabSize": 4,
 	"editor.formatOnSave": true,
 	"eslint.format.enable": false,
 	"typescript.validate.enable": true,
