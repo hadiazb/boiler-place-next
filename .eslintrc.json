@@ -5,19 +5,17 @@
     },
     "extends": [
         "eslint:recommended",
-        "react-app",
-        "react-app/jest",
+        "next",
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint", "react-hooks"],
+    "plugins": ["@typescript-eslint", "react-hooks", "eslint-plugin-prettier"],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "rules": {
-        "no-console": "off",
         "react/prop-types": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
@@ -37,6 +35,14 @@
             }],
             "patterns": [
               "!styled-components/macro"
+            ]
+          }
+        ],
+        "no-console": [
+          "warn",
+          {
+            "allow": [
+              "error"
             ]
           }
         ]

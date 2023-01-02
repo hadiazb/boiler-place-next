@@ -1,15 +1,12 @@
-import { StyledDefaultLayout } from './viewLayout.module-styles'
+import { StyledViewLayout } from './viewLayout.module-styles'
 
 export type ViewMainLayoutProps = {
     children: React.ReactNode
+    pt?: string
 }
 
-const ViewMainLayout: React.FC<ViewMainLayoutProps> = ({ children }) => {
-    return (
-        <>
-            <StyledDefaultLayout>{children}</StyledDefaultLayout>
-        </>
-    )
+const ViewMainLayout: React.FC<ViewMainLayoutProps> = ({ children, pt }) => {
+    return <StyledViewLayout pt={pt}>{children}</StyledViewLayout>
 }
 
 export default ViewMainLayout

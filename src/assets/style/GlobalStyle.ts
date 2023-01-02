@@ -6,11 +6,11 @@ import { getMontserratFont, getHelveticaFont } from './webfonts'
 
 // type definitions
 export type GlobalStyleProps = {
-  reset?: boolean
+    reset?: boolean
 }
 
 export type CustomStylesProps<T = DefaultTheme> = GlobalStyleProps & {
-  theme: T
+    theme: T
 }
 
 export const GlobalStyle = createGlobalStyle<CustomStylesProps>`

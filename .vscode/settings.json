@@ -16,9 +16,14 @@
 	"cSpell.enabled": true,
 	"cSpell.language": "en,es",
   "cSpell.words": [
-		"montserrat",
-		"stylelint",
-		"tailwindcss",
-		"webfonts"
-	]
+	"ecma",
+	"montserrat",
+	"persistor",
+	"pokemon",
+	"pokemons",
+	"reduxjs",
+	"stylelint",
+	"tailwindcss",
+	"webfonts"
+]
 }

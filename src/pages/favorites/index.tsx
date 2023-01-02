@@ -3,19 +3,23 @@ import { ReactElement } from 'react'
 // components
 import { MainLayout, ViewLayout, Typography } from '../../components'
 
-export default function ContactPage() {
+export default function FavoritesPage() {
     return (
         <>
             <Typography variant="h1" typeFont="secondary">
-                Contact
+                Favorites
             </Typography>
         </>
     )
 }
 
-ContactPage.getLayout = function getLayout(page: ReactElement) {
+FavoritesPage.getLayout = function getLayout(page: ReactElement) {
     return (
-        <MainLayout>
+        <MainLayout
+            title="Pokemons favorites"
+            description="Pokemons favorites"
+            contentDescription="Pokemons favorites"
+        >
             <ViewLayout>{page}</ViewLayout>
         </MainLayout>
     )

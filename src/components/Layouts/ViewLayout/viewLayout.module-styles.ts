@@ -1,5 +1,14 @@
-import tw, { styled } from 'twin.macro'
+import tw, { styled, css } from 'twin.macro'
 
-export const StyledDefaultLayout = styled.div`
-    ${tw`flex flex-col justify-center items-center py-10 min-h-[400px]`}
+export interface StyledViewLayoutProps {
+    pt?: string
+}
+
+export const StyledSizeCtr = css<StyledViewLayoutProps>`
+    padding-top: ${({ pt }) => (pt ? pt : '80px')};
+`
+
+export const StyledViewLayout = styled.div<StyledViewLayoutProps>`
+    ${tw`py-10 min-h-[400px]`}
+    ${StyledSizeCtr}
 `

@@ -35,6 +35,7 @@ const Typography: React.FC<TypographyProps> = ({
 
     return (
         <StyledTypography
+            as={variant}
             target={target ? '_blank' : ''}
             href={href}
             style={{ color: StyledColor }}
