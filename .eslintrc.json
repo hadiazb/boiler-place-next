@@ -3,14 +3,16 @@
         "browser": true,
         "es2021": true
     },
+    "root": true,
     "extends": [
-        "eslint:recommended",
         "next",
+        "prettier",
+        "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint", "react-hooks", "eslint-plugin-prettier"],
+    "plugins": ["@typescript-eslint", "react-hooks"],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"

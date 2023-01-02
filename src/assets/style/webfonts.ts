@@ -1,10 +1,7 @@
-import { css } from 'twin.macro'
-import { FlattenSimpleInterpolation } from 'styled-components'
-
 /**
  * Montserrat fonts from @font-face
  */
-export const getMontserratFont = (): FlattenSimpleInterpolation => css`
+export const getMontserratFont = (): string => `
     @font-face {
         src: url('./fonts/Montserrat-Medium.ttf') format('woff2');
         font-family: 'Montserrat';
@@ -48,7 +45,7 @@ export const getMontserratFont = (): FlattenSimpleInterpolation => css`
 /**
  * Helvetica fonts from @font-face
  */
-export const getHelveticaFont = (): FlattenSimpleInterpolation => css`
+export const getHelveticaFont = (): string => `
     @font-face {
         src: url('./fonts/Helvetica-Light.ttf') format('woff2');
         font-family: 'Helvetica';
