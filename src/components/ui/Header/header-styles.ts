@@ -1,7 +1,12 @@
-import tw, { styled } from 'twin.macro'
+import tw, { styled, css } from 'twin.macro'
+
+export const StyledShadowMixed = css`
+    ${tw`shadow-[0px 3px 6px #00000029]`}
+`
 
 export const StyledHeader = styled.header`
-    ${tw`bg-primary fixed left-0 top-0 right-0 shadow-[0px 3px 6px #00000029]`}
+    ${StyledShadowMixed}
+    ${tw`bg-primary fixed left-0 top-0 right-0 z-50`}
 `
 
 export const StyledHeaderSection = styled.section`

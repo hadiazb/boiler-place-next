@@ -17,7 +17,7 @@ export interface ButtonStyledProps extends ButtonHTMLAttributes<HTMLButtonElemen
 export const ButtonStyled = styled.button.attrs({})<ButtonStyledProps>`
     ${tw`rounded-md min-w-[150px] text-base py-4 px-5 m-1.5 font-bold border border-solid`}
     ${tw`cursor-pointer transition-[all] duration-[0.4s] delay-[0.1s]`}
-    ${({ outline }) => (outline ? tw`opacity-100` : tw`opacity-50`)}
+    ${({ outline }) => (outline ? tw`opacity-100` : tw`opacity-80`)}
 
     color: ${({ outline, theme, styledType }) =>
         outline ? theme.colors[styledType || 'dark'] : theme.colors.white};
@@ -35,6 +35,6 @@ export const ButtonStyled = styled.button.attrs({})<ButtonStyledProps>`
     }
 
     &:disabled {
-        ${tw`opacity-50`}
+        ${tw`opacity-80`}
     }
 `

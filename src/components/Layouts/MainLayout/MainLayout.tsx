@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import { ThemeProvider } from 'styled-components'
@@ -28,8 +27,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
     contentDescription,
 }) => {
     const theme = Theme()
-    const { asPath } = useRouter()
-    console.log(asPath.split('/'))
+
     return (
         <>
             <Head>

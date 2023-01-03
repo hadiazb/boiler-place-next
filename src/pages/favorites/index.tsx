@@ -1,16 +1,13 @@
 import { ReactElement } from 'react'
 
 // components
-import { MainLayout, ViewLayout, Typography } from '../../components'
+import { MainLayout, ViewLayout } from '../../components'
+
+// views
+import { FavoritesView } from '../../views'
 
 export default function FavoritesPage() {
-    return (
-        <>
-            <Typography variant="h1" typeFont="secondary">
-                Favorites
-            </Typography>
-        </>
-    )
+    return <FavoritesView />
 }
 
 FavoritesPage.getLayout = function getLayout(page: ReactElement) {

@@ -2,21 +2,17 @@ import { ReactElement } from 'react'
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 
 // components
-import { MainLayout, ViewLayout, Typography, PokemonList } from '../components'
+import { MainLayout, ViewLayout } from '../components'
+
+// views
+import { HomeView } from '../views'
 
 // providers
 import { pokeApi } from '../providers'
 import { PokemonListResponse, SmallPokemon } from '../interfaces'
 
 export default function HomePage({ pokemons }: InferGetStaticPropsType<typeof getStaticProps>) {
-    return (
-        <>
-            <Typography variant="h2" typeFont="secondary">
-                Pokemons
-            </Typography>
-            <PokemonList pokemons={pokemons} />
-        </>
-    )
+    return <HomeView pokemons={pokemons} />
 }
 
 HomePage.getLayout = function getLayout(page: ReactElement) {

@@ -2,6 +2,9 @@
 const nextConfig = {
     reactStrictMode: true,
     output: 'standalone',
+    experimental: {
+        forceSwcTransforms: false,
+    },
     images: {
         domains: ['raw.githubusercontent.com'],
     },

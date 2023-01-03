@@ -8,6 +8,7 @@ import { StyledPokemonList } from './pokemonList-styles'
 
 // models
 import { SmallPokemon } from '../../interfaces'
+import { Pokemon } from '../../interfaces/pokemon'
 
 export interface PokemonListProps {
     pokemons: SmallPokemon[]
