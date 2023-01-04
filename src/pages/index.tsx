@@ -28,7 +28,7 @@ HomePage.getLayout = function getLayout(page: ReactElement) {
 }
 
 export const getStaticProps: GetStaticProps<{ pokemons: SmallPokemon[] }> = async (ctx) => {
-    const { data } = await pokeApi.get<PokemonListResponse>('/pokemon?limit=152')
+    const { data } = await pokeApi.get<PokemonListResponse>('/pokemon?limit=100')
     const pokemons: SmallPokemon[] = data.results.map((poke, i) => ({
         ...poke,
         id: i + 1,

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useDispatch, useSelector } from 'react-redux'
+import confetti from 'canvas-confetti'
 
 // components
 import { Typography, DefaultButton as Button } from '../../components'
@@ -37,6 +38,12 @@ export default function PokemonView({ pokemon }: PokemonViewProps) {
         if (existInFavorites()) {
             return dispatch(deletePokemon(pokemon))
         }
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0, x: 1 },
+            angle: 225,
+        })
         return dispatch(addPokemon(pokemon))
     }
     return (

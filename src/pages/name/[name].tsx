@@ -32,11 +32,10 @@ PokemonPage.getLayout = function getLayout(page: ReactElement) {
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
     const { data } = await pokeApi.get<PokemonListResponse>('/pokemon?limit=100')
-    const pokemonsSize = [...Array(data.results.length)].map((_, index) => `${index + 1}`)
 
     return {
-        paths: pokemonsSize.map((id) => ({
-            params: { id },
+        paths: data.results.map((poke) => ({
+            params: { name: poke.name },
         })),
         fallback: false,
     }
@@ -44,8 +43,8 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
 
 export const getStaticProps: GetStaticProps<{ pokemon: Pokemon }> = async (ctx) => {
     const { params } = ctx
-    const { id } = params as { id: string }
-    const { data } = await pokeApi.get<Pokemon>(`/pokemon/${id}`)
+    const { name } = params as { name: string }
+    const { data } = await pokeApi.get<Pokemon>(`/pokemon/${name}`)
 
     const pokemon: Pokemon = {
         id: data.id,
