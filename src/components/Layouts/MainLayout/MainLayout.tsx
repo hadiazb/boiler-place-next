@@ -13,6 +13,8 @@ import { store, persistor } from '../../../store'
 import { StyledMainLayout } from './mainLayout-styles'
 import { Theme, GlobalStyle } from '../../../assets/style'
 
+const origin = typeof window === 'undefined' ? '' : window.location.origin
+
 export type MainLayoutProps = {
     children: React.ReactNode
     title?: string
@@ -38,6 +40,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
+
+                <meta property="og:title" content={`información sobre ${title}`} />
+                <meta property="og:description" content={`Description sobre ${title}`} />
+                <meta property="og:image" content={`${origin}/image/pokemon.png`} />
             </Head>
             <Provider store={store}>
                 <PersistGate loading={null} persistor={persistor}>
