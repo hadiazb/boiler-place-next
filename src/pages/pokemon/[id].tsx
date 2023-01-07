@@ -38,24 +38,36 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
         paths: pokemonsSize.map((id) => ({
             params: { id },
         })),
-        fallback: false,
+        fallback: 'blocking',
     }
 }
 
 export const getStaticProps: GetStaticProps<{ pokemon: Pokemon }> = async (ctx) => {
     const { params } = ctx
     const { id } = params as { id: string }
-    const { data } = await pokeApi.get<Pokemon>(`/pokemon/${id}`)
+    let pokemon: Pokemon
 
-    const pokemon: Pokemon = {
-        id: data.id,
-        name: data.name,
-        sprites: data.sprites,
+    try {
+        const { data } = await pokeApi.get<Pokemon>(`/pokemon/${id}`)
+
+        pokemon = {
+            id: data.id,
+            name: data.name,
+            sprites: data.sprites,
+        }
+    } catch (error) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false,
+            },
+        }
     }
 
     return {
         props: {
             pokemon,
         },
+        revalidate: 86400,
     }
 }
